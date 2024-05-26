@@ -1,10 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
-    <title>Welcome to My GitHub Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hi this is Cindy. I am a first-year master's student in the Department of Information Management at National Taipei University, welcome to my Github Page.">
+    <title>Cindy Chang's Github Page</title>
+    <link rel="icon" href="images/YHClogo.png" type="image/x-icon">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            color: #333;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #343a40;
+            overflow: hidden;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav a {
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        } 
+
+        section {
+            padding: 2rem;
+            padding-left: 8rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #introduction {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .intro-text {
+            flex: 1;
+        }
+
+        .intro-photo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .intro-photo img {
+            max-width: 30%;
+            height: auto;
+            /* border-radius: 90%; */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .file-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .file-list li {
+            margin: 10px 0;
+        }
+        .file-list a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ffa500;
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0px;
+        }
+
+        h5 {
+            margin-top: 10px;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>This is my personal GitHub Page.</p>
+    <header>
+        <h1 style="margin-bottom:0px;">Cindy Chang's Github Page</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#engineering">2024 Software Engineering</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="introduction">
+        <div class="intro-text">
+            <h2>About Me</h2>
+            <p>Hi this is Cindy. I am a first-year master's student in the Institute of Information Management at National Taipei University, welcome to my Github Page.</p>
+            <h5>Self TMI</h5>
+            <p>Zodiac Sign｜Gemini ♊️</p>
+            <p>Interests｜Traveling, Sports, Learning Korean</p>
+            <h5>Graduated from</h5>
+            <p>Fujen Catholic University Bussiness Administration</p>
+        </div>
+        <div class="intro-photo">
+            <img src="images/myself.jpg" alt="個人照片">
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <h5>Work Experience</h5>
+            <p>• Oct 2019 - Jul 2020: Executive Assistant to CEO, ECSYNET</p>
+            <p>• Aug 2020 - Feb 2021: Internal Entrepreneurship Project Manager, ECSYNET</p>
+            <p>• Feb 2021 - Jun 2023: Product Manager, E-port Technology</p>
+            <p>• Jul 2023 - Present: Business Development Manager, E-port Technology</p>
+        <h5>Leader of Products</h5>
+            <p>• The Best Product for Taiwan Senior High School Student <a href="https://luckertw.com/">Lucker APP/WEB</a></p>
+            <p>• Simple Interest test only takes you 3 minutes <a href="https://special-rabbit.eporttw.com/">What's Special for U</a></p>
+            <p>• AI Tools for Student to find their research topic <a href="https://ai.huang.luckertw.com/">AI 黃阿姨找題目</a></p>
+        <h5>Side Project</h5>
+            <p>• Clock-in System for E-port Technology Co., Ltd. <a href="https://clockin-system.yhccindy.com/">賦能港打卡系統</a></p>
+            <p>• A Questionaire help you find your Health <a href="https://health-survey.yhccindy.com/">健康問卷</a></p>
+    </section>
+    <section id="engineering">
+        <h2>2024 Software Engineering</h2>
+        <p>Here are reports I made for this course. Feel free to check it out!</p>
+        <ul class="file-list">
+            <h5>Case Study I </h5>
+            <li>
+                <p>• Group Case Study - Duolingo <a href="files/Duolingo Case Study.pdf">(PDF)</a></p>
+            </li>
+            <h5>Midterm Presentation</h5>
+            <li>
+                <p>• Individual Presentation <a href="files/Individual Midterm Presentation.pdf">(PDF)</a></p>
+                <p>• Group Presentation <a href="files/HoDaLa.pdf">(PDF)</a></p>
+            </li>
+            <h5>Final Presentation</h5>
+            <li>
+                <p>• Individual Presentation <a href="files/Individual Midterm Presentation.pdf">(PDF)</a></p>
+                <p>• Group Presentation <a>(comingsoon)</a></p>
+            </li>
+            <!-- Repeat for other files -->
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>E-mail: <a href="mailto:cindy.chang@eporttw.com">cindy.chang@eporttw.com</a></p>
+        <p>Mobile: <a href="tel:0988611453">0988611453</a></p>
+    </section>
 </body>
 </html>
+
+

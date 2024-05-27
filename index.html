@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Hi this is Cindy. I am a first-year master's student in the Department of Information Management at National Taipei University, welcome to my Github Page.">
-    <title>Cindy Chang's Github Page</title>
+    <title>Cindy Chang's Website</title>
     <link rel="icon" href="images/YHClogo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <style>
@@ -15,49 +15,42 @@
             background-color: #f9f9f9;
         }
         
-        header {
+        /* header {
             color: #333;
-            padding: 2rem 0;
+            padding: 1rem 0;
             text-align: center;
-        }
+        } */
 
-        nav {
-            background-color: #343a40;
-            overflow: hidden;
-            text-align: center;
+        .custom-navbar {
+            background-color: #8b8b8b !important;
+            padding-left: 8rem;
+            padding-right: 8rem;
         }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            display: inline;
-        }
-        nav a {
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        } 
 
         section {
             padding: 2rem;
             padding-left: 8rem;
             border-bottom: 1px solid #ddd;
         }
+    
+        @media (max-width: 600px) {
+            section {
+                padding-left: 1rem;
+            }
+
+            .custom-navbar {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
 
         #introduction {
             display: flex;
             justify-content: space-around;
             align-items: center;
+            padding: 2rem;
+            padding-left: 8rem;
+            border-bottom: 1px solid #ddd;
         }
 
         .intro-text {
@@ -76,13 +69,27 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        @media (max-width: 600px) {
+            #introduction {
+                flex-direction: column;
+                padding-left: 1rem;
+            }
+
+            .intro-photo img {
+                max-width: 50%;
+                margin-top: 1rem;
+            }
+        }
+
         .file-list {
             list-style-type: none;
             padding: 0;
         }
+
         .file-list li {
             margin: 10px 0;
         }
+
         .file-list a {
             text-decoration: none;
             color: #007BFF;
@@ -93,6 +100,7 @@
             border-bottom: 2px solid #ffa500;
             display: inline-block;
             padding-bottom: 0.3rem;
+            font-size: 22px;
         }
 
         p {
@@ -103,32 +111,44 @@
 
         h5 {
             margin-top: 10px;
+            font-size: 18px;
         }
-
     </style>
 </head>
 <body>
-    <header>
-        <h1 style="margin-bottom:0px;">Cindy Chang's Github Page</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#engineering">2024 Software Engineering</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- <header>
+        <h1 style="margin-bottom:0px; font-size:30px;">Cindy Chang's Website</h1>
+    </header> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
+        <div class="container-fluid" style="padding-left: 0px;">
+            <a class="navbar-brand" href="#" style="font-size: 25px;">Cindy's Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about" >About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#engineering">2024 Software Engineering</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    
+
     <section id="introduction">
         <div class="intro-text">
             <h2>About Me</h2>
-            <p>Hi this is Cindy. I am a first-year master's student in the Institute of Information Management at National Taipei University, welcome to my Github Page.</p>
+            <p>Hi this is Cindy. I am a first-year master's student in the Institute of Information Management at National Taipei University, welcome to my website.</p>
             <h5>Self TMI</h5>
+            <p>I'm Taiwanese 🇹🇼</p>
+            <p>MBTI｜🅴🅽🅵🅿</p>
             <p>Zodiac Sign｜Gemini ♊️</p>
-            <p>Interests｜Traveling, Sports, Learning Korean</p>
-            <h5>Graduated from</h5>
-            <p>Fujen Catholic University Bussiness Administration</p>
+            <p>Interests｜Travel ✈️ Sports 🏀 Learn Korean 🇰🇷</p>
+            <h5>Education</h5>
+            <p>Bachelor｜FJCU Department of Bussiness Administration (Marketing Management major)</p>
+            <p>Master&nbsp&nbsp&nbsp｜NTPU Institute of Information Management (MIS major)</p>
         </div>
         <div class="intro-photo">
             <img src="images/myself.jpg" alt="個人照片">
@@ -142,12 +162,12 @@
             <p>• Feb 2021 - Jun 2023: Product Manager, E-port Technology</p>
             <p>• Jul 2023 - Present: Business Development Manager, E-port Technology</p>
         <h5>Leader of Products</h5>
-            <p>• The Best Product for Taiwan Senior High School Student <a href="https://luckertw.com/">Lucker APP/WEB</a></p>
-            <p>• Simple Interest test only takes you 3 minutes <a href="https://special-rabbit.eporttw.com/">What's Special for U</a></p>
-            <p>• AI Tools for Student to find their research topic <a href="https://ai.huang.luckertw.com/">AI 黃阿姨找題目</a></p>
+            <p>• The Best Product for Taiwan Senior High School Student <a href="https://luckertw.com/" target="_blank">Lucker APP/WEB</a></p>
+            <p>• Simple Interest test only takes you 3 minutes <a href="https://special-rabbit.eporttw.com/" target="_blank">What's Special for U</a></p>
+            <p>• AI Tools for Student to find their research topic <a href="https://ai.huang.luckertw.com/" target="_blank">AI 黃阿姨找題目</a></p>
         <h5>Side Project</h5>
-            <p>• Clock-in System for E-port Technology Co., Ltd. <a href="https://clockin-system.yhccindy.com/">賦能港打卡系統</a></p>
-            <p>• A Questionaire help you find your Health <a href="https://health-survey.yhccindy.com/">健康問卷</a></p>
+            <p>• Clock-in System for E-port Technology Co., Ltd. <a href="https://clockin-system.yhccindy.com/" target="_blank">賦能港打卡系統</a></p>
+            <p>• A Questionaire help you find your Health <a href="https://health-survey.yhccindy.com/" target="_blank">健康問卷</a></p>
     </section>
     <section id="engineering">
         <h2>2024 Software Engineering</h2>
@@ -155,19 +175,19 @@
         <ul class="file-list">
             <h5>Case Study I </h5>
             <li>
-                <p>• Group Case Study - Duolingo <a href="files/Duolingo Case Study.pdf">(PDF)</a></p>
+                <p>• Group Case Study - Duolingo <a href="files/Duolingo Case Study.pdf" target="_blank">(PDF)</a></p>
             </li>
             <h5>Midterm Presentation</h5>
             <li>
-                <p>• Individual Presentation <a href="files/Individual Midterm Presentation.pdf">(PDF)</a></p>
-                <p>• Group Presentation <a href="files/HoDaLa.pdf">(PDF)</a></p>
+                <p>• Individual Presentation <a href="files/Individual Midterm Presentation.pdf" target="_blank">(PDF)</a></p>
+                <p>• Group Presentation <a href="files/HoDaLa.pdf" target="_blank">(PDF)</a></p>
             </li>
             <h5>Final Presentation</h5>
             <li>
-                <p>• Individual Presentation <a href="files/Individual Midterm Presentation.pdf">(PDF)</a></p>
-                <p>• Group Presentation <a>(comingsoon)</a></p>
+                <p>• Individual Presentation <a href="files/Final individual presentation.pdf" target="_blank">(PDF)</a></p>
+                <p>• Group Presentation <a>(❗️Coming soon❗️)</a></p>
             </li>
-            <!-- Repeat for other files -->
+            
         </ul>
     </section>
     <section id="contact">
@@ -175,7 +195,8 @@
         <p>E-mail: <a href="mailto:cindy.chang@eporttw.com">cindy.chang@eporttw.com</a></p>
         <p>Mobile: <a href="tel:0988611453">0988611453</a></p>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ZkF6VV0FjlUa3pmLOqTa0B0vDTQpbsiJ+4s+FfubpDbhBztd6ulqbZndf+VJrfxa" crossorigin="anonymous"></script>
 </body>
 </html>
-
 
